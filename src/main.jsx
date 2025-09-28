@@ -1,10 +1,10 @@
-import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import App_Forms from './Forms/App';
-import { TodoProvider } from './Forms/context/TodoContext';
+import App from './App';
+import { Provider } from 'react-redux';
+import store from './store/index';
 
 createRoot(document.getElementById('root')).render(
-	<TodoProvider>
-		<App_Forms />
-	</TodoProvider>
+	<Provider store={store}>
+		<App />
+	</Provider>
 );
